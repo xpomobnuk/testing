@@ -37,29 +37,195 @@ body
 		overflow: none!important
 
 .main_head
+	position: relative
 	min-height: 100vh
+	background-image: url(../img/fon.jpg)
 	background-size: cover
 	background-position: top center
+	
 
 
-.header-content
-	position: relative
-	height: 100vh
-	.top_wrapper
-		display: table
+
+.mnu-line
+	width: 100%
+	background-color: #fff
+	min-height: 70px
+	.mnu-line-wrap
 		width: 100%
 		height: 100%
+		max-width: 1170px
+		margin: 0 auto
+		.logo
+			display: block
+			padding: 16px 0px 10px 25px
+			float: left
+			margin-right: 25px
+		.main-mnu
+			float: left
+			ul
+				margin: 0
+				padding: 0
+				li
+					display: inline-block
+					text-transform: uppercase
+					list-style: none
+					&.active
+						border-bottom: 2px solid #59cbfa
+						background-color: #f5f6f9
+					a
+						text-decoration: none
+						display: block
+						font-size: em(13px)
+						padding: 26px 19px 24px
+						font-family: "Roboto-Light", sans-serif
+						font-style: normal
+						color: #3b3b3b
+					&:first-child
+						border-bottom: none
+						background-color: #fff
+						a
+							padding: 26px 10px 24px
+		.header_contacts
+			font-family: "Roboto-Black", sans-serif
+			font-size: em(13px)
+			float: left
+			margin: 26px 13px 26px 10px
+			i
+				color: #737475
+				margin-right: 15px
+		.header_working_hours
+			font-family: "Roboto-Black", sans-serif
+			font-size: em(13px)
+			float: left
+			margin: 26px 18px 26px 0
+			i
+				color: #737475
+				margin-right: 15px
+		.btn-wrap		
+			width: 230px
+			height: 48px
+			float: left
+			background: linear-gradient(to bottom, #34c9e2, #5cccaf)
+			margin-top: 11px
+			a
+				font-size: em(13px)
+				font-family: "Roboto-Black", sans-serif
+				display: block
+				text-decoration: none
+				text-transform: uppercase
+				color: #fff
+				padding: 15px 14px
+				+mt(.5s)
+				&:hover
+					+mt(.5s)
+					background: darken(#34c9e2, 10%)
+
+
+
+
+.top_wrapper
+	display: table
+	width: 100%
+	height: 65%
+	position: absolute
+	left: 0
+	.top_descr
+		display: table-row
+		.top_centered
+			display: table-cell
+			text-align: center
+			vertical-align: middle
+			p
+				text-transform: uppercase
+				font-family: "Roboto-Black", sans-serif
+				font-size: em(30px)
+				color: #fff
+				.robotoBlack
+					font-family: "Roboto-Black", sans-serif
+					font-size: em(18px)
+				.robotoThin
+					font-family: "Roboto-Thin", sans-serif
+					font-size: em(25px)
+				.border_roboto
+					background-color: rgba(194, 213, 219, 0.6)
+					font-size: em(30px)
+					display: inline-block
+					opacity: 0.8
+					padding: 15px 27px
+					border: 1px solid #fff
+					margin-top: 25px
+					i
+						margin-right: 10px
+
+
+//Toggle Mnu
+.mnu-line 
+	.mnu-line-wrap
+		.btn-wrap
+			.toggle-mnu 
+				display: none
+
+.toggle-mnu 
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+	span:after, span:before 
+		content: ""
 		position: absolute
-		top: 0
 		left: 0
-		.top_descr
-			display: table-row
-			.top_centered
-				display: table-cell
-				text-align: center
-				vertical-align: middle
+		top: 9px
+
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 2px
+		background-color: black
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
 
 
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-mnu
+	position: absolute
+	top: 0
+	right: 15px
+
+.hidden-mnu
+	background-color: black
+	display: none
+	position: relative
+	top: 20px
+	li
+		display: block
+
+	> ul
+		padding: 20px 0
+		> li
+			&.active
+				a
+					color: red
+					text-decoration: underline
+			> a
+				&:hover
+					color: #fff
+					background-color: red
+					text-decoration: none
 
 
 
