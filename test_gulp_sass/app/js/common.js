@@ -7,6 +7,8 @@ $(document).ready(function() {
 	});
 
 	 
+
+
 function heightDetect(){
 		$(".main_head").css("height", $(window).height());
 	};
