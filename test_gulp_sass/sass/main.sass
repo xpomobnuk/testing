@@ -15,21 +15,86 @@
 		h1
 			text-transform: uppercase
 			margin: 0
-			font-family: "Roboto-Thin", sans-serif
+			font-family: "Roboto-Light", sans-serif
 		p
 			font-family: "Roboto-Black", sans-serif
 			font-size: em(20px)
-	.portfolio_gallary_wrap
+	.portfolio_gallery_wrap
 		display: flex
 		justify-content: center
+		flex-wrap: wrap
 		.portfolio_item_wrap
 			width: 25%
+			@media only screen and (max-width : 1399px)
+				width: 33.33333%
+			@media only screen and (max-width : 1023px)
+				width: 50%
+			@media only screen and (max-width : 650px)
+				width: 100%
 			img
 				max-width: 100%
 			a
 				width: 100%
 				display: block
 				height: 100%
+			.item_img_wrap
+				background: url('../img/portfolio/1.jpg') center no-repeat 
+				background-size: cover
+				min-height: 335px
+				position: relative
+				.top_item_wrap
+					position: absolute
+					top: 0
+					left: 0
+					height: 60%
+					width: 100%
+					background: linear-gradient(to bottom, #34c9e2, #5cccaf)
+					opacity: 0.7
+				.buttom_item_wrap
+					display: flex
+					position: absolute
+					top: 60%
+					left: 0
+					height: 40%
+					width: 100%
+					background-color: #f0f0f2		
+					opacity: 0.9
+			&:nth-of-type(2)
+				.item_img_wrap
+					background: url('../img/portfolio/2.jpg') center no-repeat
+					background-size: cover
+			&:nth-child(3)
+				.item_img_wrap
+					background: url('../img/portfolio/3.jpg') center no-repeat
+					background-size: cover
+			&:nth-child(4)
+				.item_img_wrap
+					background: url('../img/portfolio/4.jpg') center no-repeat
+					background-size: cover
+			&:nth-child(5)
+				.item_img_wrap
+					background: url('../img/portfolio/5.jpg') center no-repeat
+					background-size: cover
+			&:nth-child(6)
+				.item_img_wrap
+					background: url('../img/portfolio/6.jpg') center no-repeat
+					background-size: cover
+			&:nth-child(7)
+				.item_img_wrap
+					background: url('../img/portfolio/7.jpg') center no-repeat
+					background-size: cover
+			&:nth-child(8)
+				.item_img_wrap
+					background: url('../img/portfolio/8.jpg') center no-repeat
+					background-size: cover
+			&:last-child
+				margin-right: auto
+
+
+				
+
+
+
 
 
 

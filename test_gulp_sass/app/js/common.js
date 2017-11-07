@@ -24,17 +24,9 @@ $(".toggle-mnu").click(function(){
 	 
 
 
-// function heightDetect(){
-// 		$(".main_head").css("height", $(window).height());
-// 	};
-// 	heightDetect();
-
-// 	$(window).resize(function() {
-// 		heightDetect();
-// 	})
 
 
-$(".top_centered p").animated("fadeInDown");
+$(".top_wrapper").animated("fadeInDown");
 
 
 
