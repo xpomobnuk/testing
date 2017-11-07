@@ -28,6 +28,16 @@ $(".toggle-mnu").click(function(){
 
 $(".top_wrapper").animated("fadeInDown");
 
+// $('.item_img_wrap').hover(
+// 	function(){
+// 		$(".top_item_wrap span").animated("bounceIn");
+// 	},
+// 	function(){
+// 		$(".top_item_wrap span").animated("bounceOut");
+// 	}
+// );
+
+
 
 
 
