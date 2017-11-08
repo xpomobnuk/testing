@@ -26,6 +26,7 @@
 		flex-wrap: wrap
 		padding-bottom: 40px
 		.portfolio_item_wrap
+			overflow: hidden
 			width: 25%
 			@media only screen and (max-width : 1399px)
 				width: 33.33333%
@@ -107,7 +108,7 @@
 					background-color: #f0f0f2		
 					opacity: 0
 					.work-description
-						display: none
+						display: block
 						margin: auto
 						text-align: center
 						p
@@ -147,6 +148,22 @@
 			&:last-child
 				margin-right: auto
 
+	.thin-items
+		.portfolio_item_wrap
+			@media only screen and (min-width : 1024px)
+				width: 25%
+				&:nth-of-type(3n+2)
+					width: 50%
+			@media only screen and (min-width : 1400px)
+				width: 20%
+				&:nth-of-type(3n+2)
+					width: 20%
+				&:nth-of-type(4n+2),
+				&:nth-of-type(4n+3)
+					width: 30%
+
+			
+
 
 .portfolio-btn
 	width: 182px
@@ -165,8 +182,12 @@
 		font-size: em(13px)
 		font-family: "Roboto-Light", sans-serif
 
+/* ------------------- Animate bounceOut ----------------*/
 
 
+.bounceOut
+	-webkit-animation-duration: .3s
+	animation-duration: .25s
 
 
 

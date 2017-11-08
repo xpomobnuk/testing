@@ -28,14 +28,26 @@ $(".toggle-mnu").click(function(){
 
 $(".top_wrapper").animated("fadeInDown");
 
-// $('.item_img_wrap').hover(
-// 	function(){
-// 		$(".top_item_wrap span").animated("bounceIn");
+// $('.item_img_wrap').each(function() {
+// 	$(this).hover(function(){
+// 		$(this).find("span").animated("bounceIn");
 // 	},
 // 	function(){
-// 		$(".top_item_wrap span").animated("bounceOut");
-// 	}
-// );
+// 		$(this).find("span").animated("bounceOut");
+// 	});
+// });
+
+$('.item_img_wrap').each(function() {
+	$(this).hover(function(){
+		if($(this).find(".top_item_wrap").find("span").hasClass("bounceOut")) {
+			$(this).find(".top_item_wrap").find("span").removeClass("bounceOut");
+		}
+		$(this).find(".top_item_wrap").find("span").animated("bounceIn");
+	},
+	function(){
+		$(this).find(".top_item_wrap").find("span").animated("bounceOut");
+	});
+});
 
 
 
