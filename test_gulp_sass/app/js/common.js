@@ -26,16 +26,38 @@ $(".toggle-mnu").click(function(){
 
 
 
-$(".top_wrapper").animated("fadeInDown");
+$(".top_wrapper p").animated("fadeInDown");
+$(".top_wrapper .btn-wrap").animated("fadeInUp");
 
-// $('.item_img_wrap').each(function() {
-// 	$(this).hover(function(){
-// 		$(this).find("span").animated("bounceIn");
-// 	},
-// 	function(){
-// 		$(this).find("span").animated("bounceOut");
-// 	});
-// });
+
+$(".slider_wrap").owlCarousel({
+		loop:true,
+		center: true,
+		nav: true,
+		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+		responsive:{
+			0:{
+				items:1,
+			},
+			520:{
+				items:1,
+			},
+			560:{
+				items:1,
+			},
+			768:{
+				items:1,
+			},
+			992:{
+				items:1,
+			},
+			1200:{
+				items:1,
+			}
+		}
+	});
+
+
 
 $('.item_img_wrap').each(function() {
 	$(this).hover(function(){

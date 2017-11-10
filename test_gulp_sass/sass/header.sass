@@ -108,21 +108,24 @@ body
 			i
 				color: #737475
 				margin-right: 15px
-		.btn-wrap		
+		.btn-wrap
+			float: left
 			width: 230px
 			height: 48px
-			float: left
-			background: linear-gradient(to bottom, #34c9e2, #5cccaf)
-			margin-top: 11px
-			a
-				font-size: em(13px)
-				font-family: "Roboto-Black", sans-serif
-				display: block
-				text-decoration: none
-				text-transform: uppercase
-				color: #fff
-				padding: 15px 14px
-				+mt(.5s)
+
+.btn-wrap		
+	background: linear-gradient(to bottom, #34c9e2, #5cccaf)
+	margin-top: 11px
+	a
+		font-size: 13px
+		font-family: "Roboto-Black", sans-serif
+		display: block
+		text-decoration: none
+		text-transform: uppercase
+		color: #fff
+		padding: 15px 14px
+		+mt(.5s)
+
 a.button
 	&:hover
 		+mt(.5s)
@@ -234,6 +237,13 @@ a.button
 		font-family: "Roboto-Black", sans-serif
 		font-size: em(30px)
 		color: #fff
+	.btn-wrap
+		width: 182px
+		height: 48px
+		margin: auto
+		display: block
+		animation-delay: 0.2s
+
 .robotoBlack
 	font-family: "Roboto-Black", sans-serif
 	font-size: em(18px)

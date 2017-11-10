@@ -34,6 +34,7 @@ gulp.task('scripts', function() {
 		'./app/libs/waypoints/waypoints.min.js',
 		'./app/libs/animate/animate-css.js',
 		'./app/libs/animateNumber/jquery.animateNumber.min.js',
+		'./app/libs/owl-carousel/owl.carousel.min.js',
 		'.//app/libs/parallax/parallax.min.js',
 
 		])
