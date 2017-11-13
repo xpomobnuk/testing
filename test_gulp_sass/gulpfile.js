@@ -35,6 +35,8 @@ gulp.task('scripts', function() {
 		'./app/libs/animate/animate-css.js',
 		'./app/libs/animateNumber/jquery.animateNumber.min.js',
 		'./app/libs/owl-carousel/owl.carousel.min.js',
+		'./app/libs/Magnific-Popup/jquery.magnific-popup.min.js',
+		'./app/libs/equalHeights/equalHeights.min.js',
 		'.//app/libs/parallax/parallax.min.js',
 
 		])

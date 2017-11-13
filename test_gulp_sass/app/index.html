@@ -22,7 +22,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	
+	<script>
+		var map;
+		function initMap() {
+			map = new google.maps.Map(document.getElementById('map'), {
+				center: {lat: 40.701744, lng: -73.945332},
+				zoom: 12
+			});
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWlZV6O6wIXfOokgJukwpehH5vC8x4Vuk&callback=initMap"
+	async defer></script>
 
 </head>
 
@@ -58,7 +68,7 @@
 				</div>
 
 				<div class="btn-wrap">
-					<a href="#" class="button">заказать обратный звонок</a>
+					<a href="#get_callback" class="button">заказать обратный звонок</a>
 					<a href="#" class="toggle-mnu"><span></span></a>
 				</div>
 
@@ -75,6 +85,8 @@
 
 			</div>
 		</div>
+
+
 		<div class="main_content">
 			<div class="top_wrapper">
 
@@ -89,13 +101,14 @@
 					<a href="" class="button">отправить заявку</a>
 				</span>
 
-				
+
 
 
 
 			</div>
 		</div>
-		
+
+
 
 
 	</header>
@@ -104,56 +117,101 @@
 		<div class="section_name">
 			<h1>почему стоит выбрать нас</h1>
 		</div>
-		<div class="our_advantages_wrap">
+		<div class="container_wrap">
+			<div class="our_advantages_wrap">
 
-			<div class="advantage_item">
-				<div class="item_circle">
-					<div class="item_image">
+				<div class="advantage_item">
+					<div class="item_circle">
+						<div class="item_image">
+						</div>
 					</div>
+					<p>Изучим Вашу нишу<br>на уровне ДНК</p>
 				</div>
-				<p>Изучим Вашу нишу<br>на уровне ДНК</p>
+
+				<div class="advantage_item">
+					<div class="item_circle">
+						<div class="item_image">
+						</div>
+					</div>
+					<p>Наши лендинги<br>генерируют продажи</p>
+				</div>
+
+				<div class="advantage_item">
+					<div class="item_circle">
+						<div class="item_image">
+						</div>
+					</div>
+					<p>Сделаем всю работу<br>под ключ</p>
+				</div>
+
+				<div class="advantage_item">
+					<div class="item_circle">
+						<div class="item_image">
+						</div>
+					</div>
+					<p>Наши специалисты -<br>гуру своего дела</p>
+				</div>
+
 			</div>
 
-			<div class="advantage_item">
-				<div class="item_circle">
-					<div class="item_image">
-					</div>
-				</div>
-				<p>Наши лендинги<br>генерируют продажи</p>
-			</div>
 
-			<div class="advantage_item">
-				<div class="item_circle">
-					<div class="item_image">
-					</div>
-				</div>
-				<p>Сделаем всю работу<br>под ключ</p>
-			</div>
-
-			<div class="advantage_item">
-				<div class="item_circle">
-					<div class="item_image">
-					</div>
-				</div>
-				<p>Наши специалисты -<br>гуру своего дела</p>
-			</div>
 		</section>
 
 
 		<section class="slider">
 
 			<div class="slider_wrap">
-				
 
-				<div class="carousel-item">			
+
+				<div class="carousel-item">		
+
+					<div class="slide_text_wrap">
+						<div class="slide_text">
+							<div class="slide1_image hide_md"></div>
+							<div class="slide_description">
+								<h1>Разработка<br>Адаптивного дизайна</h1>
+								<p>Дополнительная информация о разработке,<br>сроки и объяснение механики.</p>
+								<span class="more"><a href="#">подробнее <i class='fa fa-angle-right'></i></a></span>
+							</div>
+						</div>
+					</div>	
+
 					<div class="item slide1"></div>			
 				</div>
 
 				<div class="carousel-item">			
+
+					<div class="slide_text_wrap">
+						<div class="slide_text">
+							<div class="slide2_image hide_md"></div>
+							<div class="slide_description">
+								<h1>Осуществляем<br>поддержку проектов</h1>
+								<p>Дополнительная информация о разработке,<br>сроки и объяснение механики.</p>
+								<span class="more"><a href="#">подробнее <i class='fa fa-angle-right'></i></a></span>
+							</div>
+						</div>
+					</div>	
+
+
 					<div class="item slide2"></div>			
 				</div>
 
 				<div class="carousel-item">			
+
+					<div class="slide_text_wrap">
+						<div class="slide_text">
+							<div class="slide3_image hide_md"></div>
+							<div class="slide_description">
+								<h1>Логотип в подарок<br>при заказе лендинга</h1>
+								<p>Дополнительная информация о разработке,<br>сроки и объяснение механики.</p>
+								<span class="more"><a href="#">подробнее <i class='fa fa-angle-right'></i></a></span>
+							</div>
+						</div>
+					</div>	
+
+
+
+
 					<div class="item slide3"></div>			
 				</div>
 
@@ -170,7 +228,7 @@
 				<h1>наше портфолио</h1>
 				<p>За 3 года работы мы создали более 200 вебсайтов, вот лишь некоторые из них</p>
 			</div>
-			
+
 			<div class="portfolio_gallery_wrap thin-items">
 
 				<div class="portfolio_item_wrap">
@@ -317,6 +375,172 @@
 		</section>
 
 
+		<section class="white prices">
+
+			<div class="section_name">
+				<h1>Цены</h1>
+				<p>Выберите одну из предложенных опций или отправьте заявку на индивидуальный проект</p>
+			</div>
+
+
+
+
+
+			<div class="container_wrap">
+				
+				<div class="price_wrap">
+
+					<div class="price_item_wrap">
+
+						<div class="name_item"><h2>Promo</h2></div>
+
+
+						<div class="price_body_wrap">
+							<div class="price_block">
+								<h1>29</h1>
+								<h2>000 <i class="fa fa-rub" aria-hidden="true"></i></h2>
+								<span class="bonus">без предоплаты</span>
+							</div>
+							<hr>
+							<div class="service_list">
+								<p>Базовый лендинг</p>
+								<p>разработка логотипа</p>
+								<p>настройка вебсайта</p>
+
+							</div>
+							<div class="btn-wrap">
+								<a href="#" class="price_btn">Отправить заявку</a>
+							</div>
+
+						</div>
+
+
+					</div>
+
+					<div class="price_item_wrap">
+
+						<div class="name_item"><h2>Premium +</h2></div>
+
+
+						<div class="price_body_wrap">
+							<div class="price_block">
+								<h1>49</h1>
+								<h2>000 <i class="fa fa-rub" aria-hidden="true"></i></h2>
+								<span class="bonus">10% скидка</span>
+							</div>
+							<hr>
+							<div class="service_list">
+								<p>уникальный дизайн</p>
+								<p>авторский логотип</p>
+								<p>личный менеджер</p>
+								<p>настройка и поддержка проекта</p>
+
+							</div>
+							<div class="btn-wrap">
+								<a href="#" class="price_btn">Отправить заявку</a>
+							</div>
+
+						</div>
+
+
+					</div>
+					<div class="price_item_wrap">
+
+						<div class="name_item"><h2>Бизнес+</h2></div>
+
+
+						<div class="price_body_wrap">
+							<div class="price_block">
+								<h1>149</h1>
+								<h2>000 <i class="fa fa-rub" aria-hidden="true"></i></h2>
+								<span class="bonus">10% скидка</span>
+							</div>
+							<hr>
+							<div class="service_list">
+								<p>интернет магазин</p>
+								<p>многостраничный вебсайт</p>
+								<p>корпоративный портал</p>
+								<p>веб приложения</p>
+
+							</div>
+							<div class="btn-wrap">
+								<a href="#" class="price_btn">Отправить заявку</a>
+							</div>
+
+						</div>
+
+
+					</div>
+
+
+				</div>
+			</div>
+
+
+
+
+		</section>
+		<section class="map">
+			<div id="map"></div>
+
+			<form class="contact_form main_form" name="contact_form" >
+				<h1>Оформить заказ</h1>
+
+				<label>
+					<input type="text" name="name" placeholder="ФИО">
+				</label>
+
+				<label>
+					<input type="text" name="email" placeholder="Адрес эл. почты">
+				</label>
+
+				<label>
+					<input type="text" name="phone" placeholder="Телефон">
+				</label>
+
+
+				<div class="btn-wrap">
+					<a href="#" class="price_btn">Заказать лендинг</a>
+				</div>
+			</form>
+
+		</section>
+
+		<footer class="footer">
+			<div class="container_wrap">
+				<div class="footer_content_wrap">
+					<a href="#" class="logo"><img src="img/logo.png" alt=""></a>
+					<p>© 2015 - MILLIDESIGN. Все права защищены</p>
+				</div>
+			</div>
+
+		</footer>
+
+		<div class="form_wrap">
+
+			<form class="callback_form main_form" name="popup_form" id="get_callback">
+				<h1>Заказать звонок</h1>
+
+				<label>
+					<input type="text" name="name" placeholder="ФИО">
+				</label>
+
+				<label>
+					<input type="text" name="phone" placeholder="Телефон">
+				</label>
+
+				<label>
+					<textarea name="text" rows="7" placeholder="Сообщение"></textarea>
+				</label>
+
+
+				<div class="btn-wrap">
+					<a href="#" class="price_btn">Отправить заявку</a>
+				</div>
+			</form>
+
+		</div>
+		
 
 		<!-- Load CSS -->
 		<script>

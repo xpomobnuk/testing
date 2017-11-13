@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+
+	 $("a[href='#get_callback']").magnificPopup({
+		mainClass: 'my-mfp-zoom-in',
+		removalDelay: 300,
+		type: 'inline',
+	});
+
 /* -------------- TOGGLE MENU ------------- */
 $(".toggle-mnu").click(function() {
  	$(this).toggleClass("on");
@@ -22,7 +29,7 @@ $(".toggle-mnu").click(function(){
 });
 
 	 
-
+$(".price_item_wrap .service_list").height('auto').equalHeights();
 
 
 

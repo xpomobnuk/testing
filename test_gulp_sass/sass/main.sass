@@ -5,6 +5,7 @@
 @import "app/libs/font-awesome/css/font-awesome.sass"
 @import "app/libs/animate/animate.sass"
 @import "app/libs/owl-carousel/assets/owl.carousel.sass"
+@import "app/libs/Magnific-Popup/magnific-popup.sass"
 
 .white
 	background-color: #fff
@@ -31,9 +32,11 @@
 	padding-bottom: 66px
 	.our_advantages_wrap
 		display: flex
-		justify-content: center
+		justify-content: space-between
 		flex-wrap: wrap
 		padding: 0 40px
+		@media only screen and (max-width : 980px)
+			justify-content: center
 		.advantage_item
 			display: inline-block
 			position: relative
@@ -129,6 +132,8 @@
 				font-size: 34px
 				line-height: 36px
 				color: #9c9c9c
+				@media only screen and (max-width : 700px)
+					top: 84%
 			.owl-nav>div.owl-prev
 				i
 					position: absolute
@@ -210,16 +215,83 @@
 			height: 450px
 			position: relative
 			margin: auto
+			.slide_text_wrap
+				width: 100%
+				position: absolute
+				z-index: 1
+				display: flex
+				flex-wrap: wrap
+				justify-content: center
+				color: #fff
+				height: 100%
+				.slide_text
+					display: flex
+					justify-content: center
+					@media only screen and (max-width : 504px)
+						margin: 0 25px
+					.slide_description
+						margin: 105px auto
+						h1
+							font-family: "Roboto-Black", sans-serif
+							font-size: 40px
+							text-transform: uppercase
+							margin: 0
+							margin-bottom: 30px
+							@media only screen and (max-width : 504px)
+								font-size: 24px
+						p
+							font-family: "Roboto-Light", sans-serif
+							font-size: 18px
+							margin-bottom: 28px
+						.more
+							font-family: "Roboto-Black", sans-serif
+							font-size: 14px
+							text-transform: uppercase
+							letter-spacing: 1px
+							a 
+								text-decoration: none
+								color: #fff
+								+mt(.5s)
+								i 
+									font-size: 18px
+								&:hover
+									color: #34c9e2
+			.hide_md
+				@media only screen and (max-width : 1199px)
+					display: none
+			.slide1_image
+				margin-right: 70px
+				width: 496px
+				background: url('../img/slider/adaptive.png') center no-repeat			
+			.slide2_image
+				margin-right: 70px
+				width: 496px
+				background: url('../img/slider/lifebuoy.png') center no-repeat
+			.slide3_image
+				margin-right: 70px
+				width: 496px
+				background: url('../img/slider/millidesign_box.png') center no-repeat
+
 		.slide1
-			background: url('../img/slider/new/11.jpg')
+			background: url('../img/slider/new/11.jpg') no-repeat
 		.slide2
-			background: url('../img/slider/new/22.jpg')
+			background: url('../img/slider/new/22.jpg') no-repeat
 		.slide3
-			background: url('../img/slider/new/33.jpg')
+			background: url('../img/slider/new/33.jpg') no-repeat
 		.item
 			height: 100%
 			background-position: 0 50%
 			background-size: cover
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-color: #333
+				opacity: 0.5
+
 
 
 
@@ -380,7 +452,6 @@
 	background: linear-gradient(to bottom, #34c9e2, #5cccaf)
 	text-align: center
 	margin: 0 auto
-	margin-bottom: 60px
 	a
 		+mt(.5s)
 		display: block
@@ -399,9 +470,238 @@
 	animation-duration: .25s
 
 
+.prices
+	padding-bottom: 100px
 
 
 
+
+
+.price_wrap
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	align-items: center
+	min-height: 650px
+	.price_item_wrap
+		+mt(.5s)
+		width: 268px
+		height: 576px
+		&:hover
+			height: 600px				
+			.name_item
+				&:before
+					opacity: 0
+				h2
+					color: #fff
+					font-family: "Roboto-Thin", sans-serif
+			.price_body_wrap
+				padding: 36px 15px 50px 44px
+				.btn-wrap
+					&:before
+						 +mt(.1s)
+						 opacity: 0
+					a
+						color: #fff	
+						
+			
+		.name_item
+			width: 100%
+			height: 100px
+			display: flex
+			position: relative
+			background: linear-gradient(to bottom, #34c9e2, #5cccaf)
+			+mt(.5s)
+			&:before
+				content: ""
+				width: 100%
+				height: 100%
+				position: absolute
+				background: #f0f0f2
+				+mt(.5s)
+
+			h2
+				font-family: "Roboto-Light", sans-serif
+				color: #3b3b3b
+				margin: 0
+				margin: auto
+				z-index: 1
+		.price_body_wrap
+			+mt(.5s)
+			padding: 36px 15px 30px 44px
+			border: 2px solid #f0f0f2
+			hr 
+				height: 3px;
+				background-color: #50cbbe;
+				border: none;
+				width: 66px;
+				margin-bottom: 50px;
+				text-align: left;
+				display: block;
+				float: left;
+				margin-top: 39px;
+			.price_block
+				height: 50px
+				h1
+					font-family: "Oswald-Bold", sans-serif
+					display: inline-block
+					margin: 0
+					float: left
+					margin-right: 7px
+				h2
+					font-family: "Oswald-Bold", sans-serif
+					display: inline-block;
+					margin: 0
+					float: left
+					line-height: 28px
+					font-size: 25px
+					i 
+						font-size: 30px
+				.bonus
+					font-family: "Roboto-Regular", sans-serif
+					text-transform: uppercase
+					display: inline-block
+					float: left
+					font-size: 14px
+					color: #50cbbe
+			.service_list
+				margin-top: 100px
+				margin-bottom: 100px
+				p 
+					font-family: "Roboto-Thin", sans-serif
+					font-size: 15px
+					text-transform: uppercase
+					font-weight: 600
+			.btn-wrap	
+				width: 182px
+				height: 48px
+				text-align: center
+				position: relative
+				&:before
+						border: 1px solid #3b3b3b
+						content: ""
+						top: 0
+						left: 0
+						height: 100%
+						width: 100%
+						position: absolute
+						background: #fff
+						z-index: 1
+				a
+					color: #3b3b3b
+					position: relative
+					z-index: 1
+
+.price_wrap
+	@media only screen and (max-width : 963px)
+		justify-content: center
+	.price_item_wrap
+		&:nth-child(2)
+			margin: 0 40px
+			@media only screen and (max-width : 695px)
+				margin-top: 80px
+		&:last-child
+			@media only screen and (max-width : 963px)
+				margin-top: 80px
+
+
+
+
+.main_form
+	background: #fff
+	text-align: center
+	position: relative
+	padding: 35px 30px 30px
+	@media only screen and (max-width : 504px)
+		padding: 35px 14px 30px
+	h1 
+		margin: 0
+		font-family: Roboto-Thin,sans-serif
+		font-size: 28px
+		font-weight: 600
+		margin-bottom: 20px
+		text-transform: uppercase
+	input
+		border: 1px solid #f1f1f1
+		//width: 270px
+		width: 91%
+		margin-bottom: 10px
+		display: block
+		padding: 10px
+		font-family: Roboto-Thin,sans-serif
+		font-size: 16px
+		font-weight: 600
+	input::-webkit-input-placeholder
+		font-family: Roboto-Thin,sans-serif
+		text-align: center
+		font-size: 16px
+		font-weight: 600
+		color: #d1d1d1
+	textarea
+		border: 1px solid #f1f1f1
+		//width: 270px
+		width: 91%
+		padding: 10px
+		resize: none
+		font-family: Roboto-Thin,sans-serif
+		font-size: 16px
+		font-weight: 600
+		float: left
+	textarea::-webkit-input-placeholder
+		font-family: Roboto-Thin,sans-serif
+		text-align: center
+		font-size: 16px
+		font-weight: 600
+		color: #d1d1d1
+	.btn-wrap
+		width: 100%
+		float: left
+		a:hover
+			background: #1caec7;
+
+.callback_form
+	margin: auto
+	height: 370px
+	max-width: 320px
+	input
+		width: 93%
+	textarea
+		width: 93%
+	@media only screen and (max-width : 345px)
+		input
+			padding: 9px
+		textarea
+			padding: 9px
+
+.form_wrap
+	display: none
+
+
+.map
+	height: 528px
+	position: relative
+	.contact_form
+		position: absolute
+		top: 15%
+		left: 8%
+
+#map
+	height: 100%
+
+.footer
+	background-color: #f0f0f2
+	height: 70px
+	.footer_content_wrap
+		display: flex
+		height: 70px
+		justify-content: space-between
+		align-items: center
+		a 
+			line-height: 0
+		p 
+			font-family: Roboto-Light, sans-serif
+			font-size: 14px
+			font-weight: 600
 
 
 //ALWAYS END

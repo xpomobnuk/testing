@@ -49,7 +49,46 @@ body
 	display: flex
 	
 
+.container_wrap
+	max-width: 1190px
+	padding: 0 40px
+	margin: auto
 
+.my-mfp-zoom-in
+	.callback_form
+		opacity: 1
+	&.mfp-ready .callback_form
+		opacity: 1
+	&.mfp-removing .callback_form
+		opacity: 0
+	&.mfp-bg
+		opacity: 0
+		transition: opacity 0.3s ease-out
+	&.mfp-ready.mfp-bg
+		opacity: 0.8
+	&.mfp-removing.mfp-bg
+		opacity: 0
+	.mfp-close
+		background: linear-gradient(to bottom, #34c9e2, #5cccaf)
+		border-radius: 50px
+		
+
+*
+	transition: filter .25s ease
+.mfp-wrap ~ *
+	filter: blur(5px)
+
+.mfp-close-btn-in
+	.mfp-container
+		.mfp-close
+			color: #fff
+			right: -20px
+			top: -20px
+			width: 40px
+			height: 40px
+			opacity: 1
+			@media only screen and (max-width : 420px)
+				right: 0px
 
 .mnu-line
 	width: 100%
@@ -74,7 +113,7 @@ body
 				padding: 0
 				li
 					display: inline-block
-					text-transform: uppercase
+					text-transmfp-close: uppercase
 					list-style: none
 					&.active
 						border-bottom: 2px solid #59cbfa
