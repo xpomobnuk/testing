@@ -483,10 +483,13 @@
 	flex-wrap: wrap
 	align-items: center
 	min-height: 650px
+	@media only screen and (max-width : 973px)
+		justify-content: center
 	.price_item_wrap
 		+mt(.5s)
 		width: 268px
 		height: 576px
+		margin: 0 15px
 		&:hover
 			height: 600px				
 			.name_item
@@ -496,7 +499,7 @@
 					color: #fff
 					font-family: "Roboto-Thin", sans-serif
 			.price_body_wrap
-				padding: 36px 15px 50px 44px
+				padding: 36px 30px 50px 30px
 				.btn-wrap
 					&:before
 						 +mt(.1s)
@@ -528,7 +531,7 @@
 				z-index: 1
 		.price_body_wrap
 			+mt(.5s)
-			padding: 36px 15px 30px 44px
+			padding: 36px 30px 30px 30px
 			border: 2px solid #f0f0f2
 			hr 
 				height: 3px;
@@ -573,10 +576,11 @@
 					text-transform: uppercase
 					font-weight: 600
 			.btn-wrap	
-				width: 182px
+				width: 180px
 				height: 48px
 				text-align: center
 				position: relative
+				margin: auto
 				&:before
 						border: 1px solid #3b3b3b
 						content: ""
@@ -597,7 +601,6 @@
 		justify-content: center
 	.price_item_wrap
 		&:nth-child(2)
-			margin: 0 40px
 			@media only screen and (max-width : 695px)
 				margin-top: 80px
 		&:last-child
@@ -691,12 +694,18 @@
 
 .footer
 	background-color: #f0f0f2
-	height: 70px
+	min-height: 70px
 	.footer_content_wrap
 		display: flex
 		height: 70px
 		justify-content: space-between
 		align-items: center
+		flex-wrap: wrap
+		@media only screen and (max-width : 515px)
+			justify-content: center
+			padding: 30px 0
+			a 
+				margin-right: 20px
 		a 
 			line-height: 0
 		p 
